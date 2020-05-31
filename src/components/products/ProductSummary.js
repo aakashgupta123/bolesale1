@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import {Link} from 'react-router-dom'
 const ProductSummary=({product})=>{
   
-    //console.log(product)
+    console.log(product)
     return(
         <div className="container my-3  ">
         <div className="card" style={{width: '18rem'}}>

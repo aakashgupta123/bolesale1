@@ -1,16 +1,34 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {firestoreConnect} from 'react-redux-firebase'
 import {compose} from 'redux'
 import {connect} from 'react-redux'
 import { Redirect } from 'react-router-dom';
 import '../../App.css';
-const ProductDetails=(props)=>{
-    console.log(props)
-   const {product,auth}=props;
+import {Link} from 'react-router-dom'
+import {deleteProduct} from '../../store/actions/productActions';
+class ProductDetails extends Component{
+  delete(id){
+    //    console.log(this.props.story);
+    // console.log(this.props.match.params.id);
+    this.props.deleteProduct(this.props.product,this.props.match.params.id);
+    this.props.history.push('/');
+    }
+  render()
+  {
+  console.log(this.props)
+   const {product,auth}=this.props;
+   //console.log(id)
+   
    if (!auth.uid) return <Redirect to='/signin/'/>
    if (product){
+    console.log(product)
         return(
-            <div className="container my-3">
+          
+          <div>
+            
+          <button type="button" id="editbtn" class="btn btn-info ml-5 mr-3"><Link to={"/edit/"+this.props.match.params.id} product={product} key={product.id}  >Edit Product</Link></button>
+          <button className="btn btn-danger my-3" onClick={this.delete.bind(this,product.id)}>Delete Product</button>
+            <div className="container mx-5 my-3 " >
                 <div className="card" style={{width: '38rem'}}>
                 <img src={product.file} className="card-img-top" alt="..." />
             <div className="card-body">
@@ -28,7 +46,7 @@ const ProductDetails=(props)=>{
 
             </div>
           </div>
-    
+          </div>
               </div>)}  
         else
         {
@@ -38,19 +56,26 @@ const ProductDetails=(props)=>{
                 )
         }
 
-}
+}}
 const mapStateToProps=(state,ownProps)=>{
-    //console.log(state)
-    const id=ownProps.match.params.id
-    const products=state.firestore.data.products
-    const product=products ?products[id]:null
-    return{
-        product:product,
-        auth:state.firebase.auth
-    }
+  const id=ownProps.match.params.id;
+  const products=state.firestore.data.products;
+  //console.log(products)
+  const product=products?products[id] :null
+  return{
+      product:product,
+      auth:state.firebase.auth,
+      
   }
+}
+
+const mapDispatchToProps=(dispatch)=>{
+  return{
+    deleteProduct:(product,id)=>dispatch(deleteProduct(product,id))
+    }
+}
   
-  export default compose(connect(mapStateToProps),
+  export default compose(connect(mapStateToProps,mapDispatchToProps),
     firestoreConnect([
       {collection:"products"}
     ])

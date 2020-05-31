@@ -47,14 +47,14 @@ const ProductList=({products})=>{
           >
             { products && products.map(product=>{
             if (product.category=="clothing"){
-            return (<p to={"/product/" + product.id}  key={product.id}>
-              
-              <Link to={"/product/" + product.id}  key={product.id}>
-               <ProductSummary product={product}/>
-              </Link>
-            </p> )
-            }}
-            )
+              return (<p to={"/product/" + product.id}  key={product.id}>
+              <ProductSummary product={product}/>
+
+{/* <Link to={"/product/" + product.id}style={{ color: 'inherit', textDecoration: 'inherit'}}  key={product.id}>
+</Link> */}
+</p> )
+}}
+)
           }
           </ItemsCarousel> <p className="pc">Footwear</p>
           <ItemsCarousel
@@ -70,16 +70,16 @@ const ProductList=({products})=>{
 
 { products && products.map(product=>{
             if (product.category=="footwear"){
-            return (<p to={"/product/" + product.id}  key={product.id}>
+              return (<p to={"/product/" + product.id}  key={product.id}>
+              <ProductSummary product={product}/>
 
-            <Link to={"/product/" + product.id}  key={product.id}>
-               <ProductSummary product={product}/>
-              </Link>
-            </p> )
-            }}
-            )
+{/* <Link to={"/product/" + product.id}style={{ color: 'inherit', textDecoration: 'inherit'}}  key={product.id}>
+</Link> */}
+</p> )
+}}
+)
           }
-          </ItemsCarousel> 
+          </ItemsCarousel> <p className="pc">Stationary</p>
           <ItemsCarousel
             requestToChangeActive={setActiveItemIndex}
             activeItemIndex={activeItemIndex}
@@ -93,14 +93,14 @@ const ProductList=({products})=>{
 
 { products && products.map(product=>{
             if (product.category=="stationery"){
-            return (<p to={"/product/" + product.id}  key={product.id}>
-            <p> Stationery</p>
-            <Link to={"/product/" + product.id}  key={product.id}>
-               <ProductSummary product={product}/>
-              </Link>
-            </p> )
-            }}
-            )
+              return (<p to={"/product/" + product.id}  key={product.id}>
+              <ProductSummary product={product}/>
+
+{/* <Link to={"/product/" + product.id}style={{ color: 'inherit', textDecoration: 'inherit'}}  key={product.id}>
+</Link> */}
+</p> )
+}}
+)
           }
           </ItemsCarousel> <p className="pc">Essentials eg masks,sanitizers</p>
           <ItemsCarousel
@@ -116,13 +116,14 @@ const ProductList=({products})=>{
 
 { products && products.map(product=>{
             if (product.category=="essentials"){
-            return (<p to={"/product/" + product.id}  key={product.id}>
-             <Link to={"/product/" + product.id}  key={product.id}>
-               <ProductSummary product={product}/>
-              </Link>
-            </p> )
-            }}
-            )
+              return (<p to={"/product/" + product.id}  key={product.id}>
+              <ProductSummary product={product}/>
+
+{/* <Link to={"/product/" + product.id}style={{ color: 'inherit', textDecoration: 'inherit'}}  key={product.id}>
+</Link> */}
+</p> )
+}}
+)
           }
           </ItemsCarousel> <p className="pc">Toys</p>
           <ItemsCarousel
@@ -138,13 +139,14 @@ const ProductList=({products})=>{
 
 { products && products.map(product=>{
             if (product.category=="toys"){
-            return (<p to={"/product/" + product.id}  key={product.id}>
-             <Link to={"/product/" + product.id}  key={product.id}>
-               <ProductSummary product={product}/>
-              </Link>
-            </p> )
-            }}
-            )
+              return (<p to={"/product/" + product.id}  key={product.id}>
+              <ProductSummary product={product}/>
+
+{/* <Link to={"/product/" + product.id}style={{ color: 'inherit', textDecoration: 'inherit'}}  key={product.id}>
+</Link> */}
+</p> )
+}}
+)
           }
           </ItemsCarousel> <p className="pc">Kitchenware</p>
 
@@ -162,13 +164,14 @@ const ProductList=({products})=>{
 
 { products && products.map(product=>{
             if (product.category=="kitchenware"){
-            return (<p to={"/product/" + product.id}  key={product.id}>
-          <Link to={"/product/" + product.id}  key={product.id}>
-               <ProductSummary product={product}/>
-              </Link>
-            </p> )
-            }}
-            )
+              return (<p to={"/product/" + product.id}  key={product.id}>
+              <ProductSummary product={product}/>
+
+{/* <Link to={"/product/" + product.id}style={{ color: 'inherit', textDecoration: 'inherit'}}  key={product.id}>
+</Link> */}
+</p> )
+}}
+)
           }
           </ItemsCarousel> <p className="pc">Home Decor</p>
 
@@ -186,13 +189,14 @@ const ProductList=({products})=>{
 
 { products && products.map(product=>{
             if (product.category=="home_decor"){
-            return (<p to={"/product/" + product.id}  key={product.id}>
-             <Link to={"/product/" + product.id}  key={product.id}>
-               <ProductSummary product={product}/>
-              </Link>
-            </p> )
-            }}
-            )
+              return (<p to={"/product/" + product.id}  key={product.id}>
+              <ProductSummary product={product}/>
+
+{/* <Link to={"/product/" + product.id}style={{ color: 'inherit', textDecoration: 'inherit'}}  key={product.id}>
+</Link> */}
+</p> )
+}}
+)
           }
           </ItemsCarousel> <p className="pc">Sports Goods</p>
 
@@ -209,13 +213,14 @@ const ProductList=({products})=>{
 
 { products && products.map(product=>{
             if (product.category=="sports_goods"){
-            return (<p to={"/product/" + product.id}  key={product.id}>
-             <Link to={"/product/" + product.id}  key={product.id}>
-               <ProductSummary product={product}/>
-              </Link>
-            </p> )
-            }}
-            )
+              return (<p to={"/product/" + product.id}  key={product.id}>
+              <ProductSummary product={product}/>
+
+{/* <Link to={"/product/" + product.id}style={{ color: 'inherit', textDecoration: 'inherit'}}  key={product.id}>
+</Link> */}
+</p> )
+}}
+)
           }
           </ItemsCarousel>
           

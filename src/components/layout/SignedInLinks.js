@@ -4,7 +4,7 @@ import {NavLink, Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {signOut, signIn} from '../../store/actions/authActions'
 const SignedInLinks=(props)=>{
-  
+  console.log(props)
     return(  
     <ul className="navbar-nav ml-auto" >
       <Link to="/notification"><i className="fa fa-bell-o" id="bell" aria-hidden="true"></i></Link>

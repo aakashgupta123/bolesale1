@@ -9,6 +9,7 @@ import SignUp from './components/auth/SignUp'
 import CreateProduct from './components/products/CreateProduct';
 import './index.css';
 import Notifications from './components/dashboard/Notifications';
+import EditProduct from './components/products/EditProduct';
 class App extends Component {
   render(){
   return (
@@ -23,6 +24,7 @@ class App extends Component {
       <Route path="/signin" component={SignIn}/>
       <Route path="/signup" component={SignUp}/>
       <Route path="/create" component={CreateProduct}/>
+      <Route path="/edit"   component={EditProduct} />
       <Route path="/notification" component={Notifications}/>
       </Switch>
     </div>

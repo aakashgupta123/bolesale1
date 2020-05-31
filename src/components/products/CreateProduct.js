@@ -24,7 +24,7 @@ import '../../App.css';
     }
     _getURL=(bucketName,selectedFile)=>{
       
-    //console.log(bucketName)
+    
       let storageReference=firebase.storage().ref()
       storageReference.child(`${bucketName}/${selectedFile.name}`).getDownloadURL().then(
         (url)=>{
