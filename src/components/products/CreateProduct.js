@@ -75,17 +75,17 @@ import '../../App.css';
         const {auth}=this.props
         if (!auth.uid) return <Redirect to='/signin/'/>
         return(
-            <div className="container my-5">
+            <div className="container my-5 content1 ">
                 <form onSubmit={this.handleSubmit}>
-                    <h2 className="text-center">Create Product</h2>         
-                     <div className="form-group">
+                    <h2>Create Product</h2>         
+                     <div className="form-group col-md-6">
                         <label for="exampleInputProductName">Product Name</label>
                         <input type="text" className="form-control" id="product_name" aria-describedby="emailHelp" placeholder="Enter Product Name" onChange={this.handleChange}/>
                     </div>
 
 
 
-                    <div className="form-group" >
+                    <div className="form-group col-md-6" >
                         Category
                     <br></br>
                     <br></br>
@@ -107,40 +107,40 @@ import '../../App.css';
 
 
 
-                    <div className="form-group">
+                    <div className="form-group col-md-6">
                         <label for="exampleInputBrand">Brand</label>
                         <input type="text" className="form-control" id="brand" aria-describedby="emailHelp" placeholder="Enter Brand" onChange={this.handleChange}/>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group col-md-6">
                         <label for="exampleInputBrand">Warranty</label>
                         <input type="number" className="form-control" id="warranty" aria-describedby="emailHelp" placeholder="Enter Warranty" onChange={this.handleChange}/>
                     </div>
 
                     
-                    <div className="form-group">
+                    <div className="form-group col-md-6">
                         <label for="exampleInputBrand">MOQ(Minimum Amount to be sold)</label>
                         <input type="number" className="form-control" id="MOQ" aria-describedby="emailHelp" placeholder="Enter Minimum amount to be sold" onChange={this.handleChange}/>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group col-md-6">
                         <label for="exampleInputBrand">Dispatch in number of days</label>
                         <input type="number" className="form-control" id="dispatch_no" aria-describedby="emailHelp" placeholder="Enter Warranty" onChange={this.handleChange}/>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group col-md-6">
                         <label for="exampleInputBrand">Stock</label>
                         <input type="number" className="form-control" id="stock" aria-describedby="emailHelp" placeholder="Enter Stock" onChange={this.handleChange}/>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group col-md-6">
                         <label for="exampleInputDescription">Product Description</label>
                         <input type="textarea" className="form-control" id="content" placeholder="Enter Product details" onChange={this.handleChange}/>
                     </div>
                     
-                    <div className="form-group">
+                    <div className="form-group col-md-6">
                         <label for="exampleInputPrice">Price</label>
                         <input type="number" className="form-control" id="price" aria-describedby="emailHelp" placeholder="Enter Price" onChange={this.handleChange}/>
                     </div>
 
                     
-                    <div className="form-group">
+                    <div className="form-group col-md-6">
                         <label for="exampleImage">Enter Image</label>
                         <br/>
                         <input type="file" className="" id="file" placeholder="Enter Product details" onChange={this.handleChange}/>
